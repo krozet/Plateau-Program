@@ -36,7 +36,7 @@ I decided to use this method so that my average time complexity case would not a
 # Source Code
 
 ```C++
-/\*
+/*
 
 Keawa Rozet
 
@@ -46,23 +46,23 @@ Homework #2
 
 Plateau Program (max sequence length)
 
-\*/
+*/
 
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
-int maxlen(int \*array, int elements);
+int maxlen(int *array, int elements);
 
-int main(int argc, char const \*argv[]) {
+int main(int argc, char const *argv[]) {
 
   int array[] = {1,1,1,1,2,2,2,3,3,4,4,4,4,4,5,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,8,8,9,9,9,9,10,10,10,10,10,10};
 
-  printf(&quot;Max length: %d\n&quot;, maxlen(array, sizeof(array)/sizeof(int)));
+  printf(Max length: %d\n, maxlen(array, sizeof(array)/sizeof(int)));
 
   return 0;
 
 }
 
-int maxlen(int \*array, int elements) {
+int maxlen(int *array, int elements) {
 
   int count = 0; //keeps track how many times each number occurs
 
@@ -78,7 +78,7 @@ int maxlen(int \*array, int elements) {
 
   int temp = array[0];
 
-  for (int i = 0; i &lt; elements; i++) {
+  for (int i = 0; i < elements; i++) {
 
     if (temp == array[i])
 
@@ -90,7 +90,7 @@ int maxlen(int \*array, int elements) {
 
       //set new max number
 
-      if (count &gt; maxCount) {
+      if (count > maxCount) {
 
         maxCount = count;
 
@@ -108,13 +108,13 @@ int maxlen(int \*array, int elements) {
 
       //takes the average length a number occurs
 
-      //check if the current number&#39;s occurance is equal to the average length or half
+      //check if the current number's occurance is equal to the average length or half
 
       //if so, move to that location in the array to save time
 
       avgLength = i/numUnique; //total num of elements so far divided by unique numbers
 
-      if ((i + avgLength) &lt;= elements) {
+      if ((i + avgLength) == elements) {
 
         if (temp == array[i + avgLength]) {
 
@@ -134,7 +134,7 @@ int maxlen(int \*array, int elements) {
 
       }
 
-      else if ((i + avgLength/2) &lt;= elements) {
+      else if ((i + avgLength/2) == elements) {
 
         if (temp == array[i + avgLength/2]) {
 
@@ -154,7 +154,7 @@ int maxlen(int \*array, int elements) {
 
   //performance evaluation
 
-  printf(&quot;Max number: %d\tO(n) = %d\tActual complexity = %d\n&quot;, max, elements, times);
+  printf(Max number: %d\tO(n) = %d\tActual complexity = %d\n, max, elements, times);
 
   return maxCount;
 
