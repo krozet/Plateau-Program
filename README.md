@@ -34,9 +34,8 @@ If this returns true, it will behave like mentioned above. If false, then the co
 I decided to use this method so that my average time complexity case would not always be equal to my worst time complexity case. This algorithm works best with number frequencies that are of roughly similar length. This code does not receive a boost of efficiency with low frequency numbers.
 
 # Source Code
-'''
 
-
+```C++
 /\*
 
 Keawa Rozet
@@ -160,8 +159,7 @@ int maxlen(int \*array, int elements) {
   return maxCount;
 
 }
-
-'''
+```
 
 # Example Build and Execution through Terminal
 
